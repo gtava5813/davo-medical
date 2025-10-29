@@ -1,0 +1,33 @@
+================================================================================
+MIMIC-III DAVO TRAINING DATASET SUMMARY
+================================================================================
+
+Total Samples: 79,451
+Unique Patients: 98
+
+Vital Signs Distribution:
+VITAL_TYPE
+RR      16476
+DBP     15601
+SBP     15595
+HR      15469
+SpO2    15268
+TEMP     1042
+
+Priority Class Distribution:
+PRIORITY_CLASS
+LOW         52869
+MEDIUM      20768
+HIGH         5314
+CRITICAL      500
+
+Lambda (Decay Rate) Statistics:
+count    79451.000000
+mean         0.290773
+std          0.256672
+min          0.100000
+25%          0.100000
+50%          0.100000
+75%          0.500000
+max          1.500000
+

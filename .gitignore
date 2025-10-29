@@ -1,0 +1,104 @@
+# ================================
+# DAVO Medical - .gitignore
+# ================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environments
+ai-env/
+venv/
+env/
+ENV/
+
+# Logs and Temp Files
+*.log
+nohup.out
+*.swp
+*.swo
+*~
+
+# ================================
+# Data Files (DO NOT COMMIT)
+# ================================
+
+# Raw MIMIC-III CSVs (6GB - too large)
+data/mimic-iii/mimic-iii-clean/raw/
+
+# Large processed CSV files
+data/mimic-iii/mimic-iii-clean/vital_signs/*.csv
+
+# BUT keep the summary text file
+!data/mimic-iii/mimic-iii-clean/vital_signs/dataset_summary.txt
+
+# Processed training data
+data/processed/*.csv
+data/raw/*.csv
+*.csv
+
+# Keep directory structure
+!.gitkeep
+
+# ================================
+# Model Files (DO NOT COMMIT)
+# ================================
+
+# Base model checkpoints (download on cloud)
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+
+# Fine-tuned models (download after cloud training)
+models/fine-tuned/*
+!models/fine-tuned/.gitkeep
+
+# Exports
+models/exports/*
+!models/exports/.gitkeep
+
+# ================================
+# IDE and OS
+# ================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+.directory
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# ================================
+# Cloud/Deployment
+# ================================
+
+# Credentials
+.aws/
+*.pem
+*.key
+.env
+.env.local
+
+# Packages
+*.tar.gz
+*.zip
